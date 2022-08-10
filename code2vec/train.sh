@@ -16,3 +16,21 @@ model_dir=models/${type}
 mkdir -p ${model_dir}
 set -e
 python3 -u code2vec.py --data ${data} --test ${test_data} --save ${model_dir}/saved_model
+
+
+
+type=java14m
+dataset_name=java14m
+data_dir=data/java14m
+data=data/java14m/java14m
+test_data=data/java14m/java14m.val.c2v
+model_dir=models/java14m
+
+mkdir -p models/java14m
+set -e
+python3 -u code2vec.py --data ${data} --test ${test_data} --save ${model_dir}/saved_model
+
+python3 -u code2vec.py --data ${data} --test ${test_data} --save ${model_dir}/saved_model
+
+
+
